@@ -1,0 +1,21 @@
+{
+    "version": "0.1.0",
+    "command": "gulp",
+    "isShellCommand": true,
+    "args": [
+        "--no-color"
+    ],
+    "tasks": [
+        {
+            "taskName": "typescript-compile",
+            "isBuildCommand": true,
+            "showOutput": "always",
+            "problemMatcher": "$gulp-tsc"
+        },
+        {
+            "taskName": "tests-run",
+            "isTestCommand": true,
+            "showOutput": "always"
+        }
+    ]
+}

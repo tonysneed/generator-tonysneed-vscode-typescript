@@ -1,0 +1,33 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug TypeScript Tests",
+			"type": "node",
+			"request": "launch",
+			"program": "node_modules/mocha/bin/mocha",
+			"stopOnEntry": false,
+			"args": [],
+			"cwd": "."
+		},
+		{
+			"name": "Launch",
+			"type": "node",
+			"request": "launch",
+			"program": "generators/app/index.js",
+			"stopOnEntry": false,
+			"args": [],
+			"cwd": ".",
+			"runtimeExecutable": null,
+			"runtimeArgs": [
+				"--nolazy"
+			],
+			"env": {
+				"NODE_ENV": "development"
+			},
+			"externalConsole": false,
+			"sourceMaps": false,
+			"outDir": null
+		}
+	]
+}

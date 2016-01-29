@@ -1,0 +1,70 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug Current JavaScript File",
+			"type": "node",
+			"request": "launch",
+            // File currently being viewed
+			"program": "${file}",
+			"stopOnEntry": true,
+			"args": [],
+			"cwd": "."
+		},
+		{
+			"name": "Debug Current TypeScript File",
+			"type": "node",
+			"request": "launch",
+            // File currently being viewed
+			"program": "${file}",
+			"stopOnEntry": true,
+			"args": [],
+			"cwd": ".",
+			"sourceMaps": true,
+			"outDir": "dist"
+		},
+		{
+			"name": "Debug TypeScript Tests",
+			"type": "node",
+			"request": "launch",
+			"program": "node_modules/jasmine-node/bin/jasmine-node",
+			"stopOnEntry": false,
+			"args": [
+                "dist",
+				"--verbose"
+            ],
+			"cwd": ".",
+			"sourceMaps": true,
+			"outDir": "dist"
+		},
+		{
+			"name": "Debug Current TypeScript Test",
+			"type": "node",
+			"request": "launch",
+			"program": "node_modules/jasmine-node/bin/jasmine-node",
+			"stopOnEntry": false,
+			"args": [
+                // File currently being viewed
+                "${file}",
+				"--verbose",
+                "--test-dir",
+                "dist"
+            ],
+			"cwd": ".",
+			"sourceMaps": true,
+			"outDir": "dist"
+		},
+		{
+			"name": "Debug Gulp Task",
+			"type": "node",
+			"request": "launch",
+			"program": "node_modules/gulp/bin/gulp.js",
+			"stopOnEntry": false,
+			"args": [
+                // Replace 'default' with name of gulp task to run
+                "default"
+            ],
+			"cwd": "."
+		}
+	]
+}

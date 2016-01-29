@@ -2,21 +2,54 @@
   "name": "generator-tonysneed-vscode-typescript",
   "version": "1.0.0",
   "description": "Yeoman generator for TypeScript projects using Visual Studio Code",
+  "homepage": "https://github.com/tonysneed/generator-tonysneed-vscode-typescript#readme",
+  "author": "Tony Sneed",
+  "files": [
+    "generators"
+  ],
   "main": "app/index.js",
+  "keywords": [
+    "yeoman-generator",
+    "visual-studio-code",
+    "typescript"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp",
+    "prepublish": "gulp prepublish"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tonysneed/generator-tonysneed-vscode-typescript.git"
   },
-  "keywords": [
-    "yeoman-generator"
-  ],
-  "author": "Tony Sneed",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tonysneed/generator-tonysneed-vscode-typescript/issues"
   },
-  "homepage": "https://github.com/tonysneed/generator-tonysneed-vscode-typescript#readme"
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "lodash": "^4.0.1",
+    "yeoman-generator": "^0.21.1",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "eslint-config-xo-space": "^0.7.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0",
+    "mocha": "^2.4.5",
+    "tslint": "^3.3.0",
+    "tslint-stylish": "^2.1.0-beta",
+    "typescript": "^1.7.5",
+    "yeoman-assert": "^2.0.0"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  }
 }

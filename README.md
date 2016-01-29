@@ -1,4 +1,4 @@
-## Yeoman Generator for TypeScript Projects Using Visual Studio Code
+## Tony Sneed's Yeoman Generator for TypeScript Projects Using Visual Studio Code
 
 ### Basic Usage
 

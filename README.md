@@ -1,22 +1,22 @@
-# Yeoman Generator for tonysneed-vscode-typescript
+## Yeoman Generator for TypeScript Projects Using Visual Studio Code
 
-This is a Yeoman generator for creating TypeScript projects using Visual Studio Code.
+### Basic Usage
 
-## Install Yeoman
+1. Install Yeoman
 
-```shell
-npm install -g yo
-```
+    ```shell
+    npm install -g yo
+    ```
 
-## Install the generator
+2. Install the generator
 
-```shell
-npm install -g generator-tonysneed-vscode-typescript
-```
+    ```shell
+    npm install -g generator-tonysneed-vscode-typescript
+    ```
 
-## Use the generator
+3. Use the generator
 
-```shell
-yo tonysneed-vscode-typescript
-```
+    ```shell
+    yo tonysneed-vscode-typescript
+    ```
 

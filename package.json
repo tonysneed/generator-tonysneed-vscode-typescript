@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Yeoman generator for TypeScript projects using Visual Studio Code",
   "homepage": "https://github.com/tonysneed/generator-tonysneed-vscode-typescript#readme",
-  "author": "Tony Sneed",
+  "author": {
+    "name": "Tony Sneed",
+    "email": "tony@tonysneed.com",
+    "url": "http://blog.tonysneed.com"
+  },
   "files": [
     "generators"
   ],

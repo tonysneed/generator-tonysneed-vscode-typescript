@@ -12,6 +12,7 @@
 
 2. Install the **tonysneed-vscode-typescript** generator.
   - Use **npm** to install the generator globally.
+
     ```shell
     npm install -g generator-tonysneed-vscode-typescript
     ```
@@ -19,6 +20,7 @@
 3. Create a **directory** for your new TypeScript project.
   - Create the directory where you wish to place your TypeScript project.
   - `cd` into the directory you just created.
+
     ```shell
     mkdir MyCoolTypeScriptProject
     cd MyCoolTypeScriptProject
@@ -28,7 +30,7 @@
   - Run the `tonysneed-vscode-typescript` Yeoman generator.
     + For a list of optional parameters, add the `--help` parameter.
     + To prevent installation of **dependencies**, add the `--skip-install` parameter.
-  
+
     ```shell
     ~/source/MyCoolTypeScriptProject $ yo tonysneed-vscode-typescript
 
@@ -51,6 +53,7 @@
   - Follow these instructions to set up VS Code:
     https://code.visualstudio.com/Docs/editor/setup
   - Launch VS Code from the command line and follow instructions in the project's **README.md** file.
+
     ```shell
     code .
     ```

@@ -40,9 +40,11 @@
   - Click the Debug icon in VS Code.
   - Select *Debug Current TypeScript File* dropdown and press **F5** to launch
     the debugger and break on the first line.
-  - Then select `greeter.spec.ts` and set a breakpoint.
+  - Then select `greeter.spec.ts` and set a breakpoint on line 15.
   - Select *Debug Current TypeScript Test* dropdown and press **F5** to launch
     the debugger and stop at the breakpoint.
+  - Press **F11** to step into `greeter.greet()`.
+  - Press **Shift+F5** to stop the debugger.
     
 5. Next you can execute **gulp** tasks from the Terminal.
 

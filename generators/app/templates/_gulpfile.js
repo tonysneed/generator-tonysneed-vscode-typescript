@@ -35,7 +35,7 @@ gulp.task('scripts-vet', ['vet:es5', 'vet:typescript'], function () {
  * Compile TypeScript
  */
 gulp.task('typescript-compile', ['vet:typescript', 'clean:generated'], function () {
-    
+
     log('Compiling TypeScript');
     exec('node_modules/typescript/bin/tsc -p src');
 });
@@ -44,7 +44,7 @@ gulp.task('typescript-compile', ['vet:typescript', 'clean:generated'], function 
  * Watch and compile TypeScript
  */
 gulp.task('typescript-watch', ['typescript-compile'], function () {
-    
+
     return gulp.watch(config.ts.files, ['typescript-compile']);
 });
 
@@ -53,7 +53,7 @@ gulp.task('typescript-watch', ['typescript-compile'], function () {
  * @return {Stream}
  */
 gulp.task('tests-run', ['typescript-compile'], function () {
-    
+
     startTests(true /*singleRun*/);
 });
 
@@ -62,7 +62,7 @@ gulp.task('tests-run', ['typescript-compile'], function () {
  * Watch for file changes and re-run tests on each change
  */
 gulp.task('tests-watch', ['typescript-watch'], function () {
-    
+
     startTests(false /*singleRun*/);
 });
 
@@ -71,9 +71,9 @@ gulp.task('tests-watch', ['typescript-watch'], function () {
  * @return {Stream}
  */
 gulp.task('tests-serve', ['specs:inject', 'imports:inject','typescript-watch'], function () {
-    
+
     log('Running the spec runner');
-    
+
     serveSpecRunner();
 });
 
@@ -127,7 +127,7 @@ gulp.task('clean:generated', function () {
  * @return {Stream}
  */
 gulp.task('specs:inject', function () {
-    
+
     log('Injecting scripts into the spec runner');
 
     return gulp
@@ -142,7 +142,7 @@ gulp.task('specs:inject', function () {
  * @return {Stream}
  */
 gulp.task('imports:inject', function(){
-    
+
     log('Injecting imports into system.js');
 
     gulp.src(config.imports.template)
@@ -158,7 +158,7 @@ gulp.task('imports:inject', function(){
  * Can pass in a string, object or array.
  */
 function log(msg) {
-    
+
     if (typeof (msg) === 'object') {
         for (var item in msg) {
             if (msg.hasOwnProperty(item)) {
@@ -201,7 +201,7 @@ function startTests(singleRun) {
  * @returns {Stream} The ordered stream
  */
 function orderSrc(src, order) {
-    
+
     return gulp
         .src(src)
         .pipe($.if(order, $.order(order)));
@@ -215,7 +215,7 @@ function orderSrc(src, order) {
  * @returns {Stream}   The stream
  */
 function inject(src, label, order) {
-    
+
     var options = { read: false, addRootSlash: false };
     if (label) {
         options.name = 'inject:' + label;
@@ -230,10 +230,10 @@ function inject(src, label, order) {
  * @returns {Stream}   The stream
  */
 function injectString(src, label) {
-    
+
     var search = '/// inject:' + label;
     var first = '\n    System.import(\'';
-    var last = '\'),';
+    var last = '\')';
     var specNames = [];
 
     src.forEach(function(pattern) {
@@ -253,7 +253,7 @@ function injectString(src, label) {
  * --verbose
  */
 function serveSpecRunner() {
-    
+
     if (browserSync.active) {
         return;
     }
@@ -271,7 +271,7 @@ function serveSpecRunner() {
         reloadDelay: config.browserSync.reloadDelay,
         startPath: config.specRunnerFile
     };
-    
+
     if (args.verbose) {
         options.logLevel = 'debug';
     }

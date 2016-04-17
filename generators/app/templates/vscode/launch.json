@@ -9,7 +9,7 @@
 			"program": "${file}",
 			"stopOnEntry": true,
 			"args": [],
-			"cwd": "."
+			"cwd": "${workspaceRoot}"
 		},
 		{
 			"name": "Debug Current TypeScript File",
@@ -19,29 +19,29 @@
 			"program": "${file}",
 			"stopOnEntry": true,
 			"args": [],
-			"cwd": ".",
+			"cwd": "${workspaceRoot}",
 			"sourceMaps": true,
-			"outDir": "dist"
+			"outDir": "${workspaceRoot}/dist"
 		},
 		{
 			"name": "Debug TypeScript Tests",
 			"type": "node",
 			"request": "launch",
-			"program": "node_modules/jasmine-node/bin/jasmine-node",
+			"program": "${workspaceRoot}/node_modules/jasmine-node/bin/jasmine-node",
 			"stopOnEntry": false,
 			"args": [
                 "dist",
 				"--verbose"
             ],
-			"cwd": ".",
+			"cwd": "${workspaceRoot}",
 			"sourceMaps": true,
-			"outDir": "dist"
+			"outDir": "${workspaceRoot}/dist"
 		},
 		{
 			"name": "Debug Current TypeScript Test",
 			"type": "node",
 			"request": "launch",
-			"program": "node_modules/jasmine-node/bin/jasmine-node",
+			"program": "${workspaceRoot}/node_modules/jasmine-node/bin/jasmine-node",
 			"stopOnEntry": false,
 			"args": [
                 // File currently being viewed
@@ -50,21 +50,21 @@
                 "--test-dir",
                 "dist"
             ],
-			"cwd": ".",
+			"cwd": "${workspaceRoot}",
 			"sourceMaps": true,
-			"outDir": "dist"
+			"outDir": "${workspaceRoot}/dist"
 		},
 		{
 			"name": "Debug Gulp Task",
 			"type": "node",
 			"request": "launch",
-			"program": "node_modules/gulp/bin/gulp.js",
+			"program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
 			"stopOnEntry": false,
 			"args": [
                 // Replace 'default' with name of gulp task to run
                 "default"
             ],
-			"cwd": "."
+			"cwd": "${workspaceRoot}"
 		}
 	]
 }

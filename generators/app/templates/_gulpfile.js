@@ -216,7 +216,7 @@ function orderSrc(src, order) {
  */
 function inject(src, label, order) {
 
-    var options = { read: false, addRootSlash: false };
+    var options = { addRootSlash: false };
     if (label) {
         options.name = 'inject:' + label;
     }

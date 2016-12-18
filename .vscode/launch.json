@@ -5,19 +5,22 @@
 			"name": "Debug TypeScript Tests",
 			"type": "node",
 			"request": "launch",
-			"program": "node_modules/mocha/bin/mocha",
+			"program": "${workspaceRoot}/node_modules/mocha/bin/mocha",
 			"stopOnEntry": false,
 			"args": [],
-			"cwd": "."
+			"cwd": "${workspaceRoot}/"
 		},
 		{
 			"name": "Launch",
 			"type": "node",
 			"request": "launch",
-			"program": "generators/app/index.js",
+			"program": "/usr/local/bin/yo",
 			"stopOnEntry": false,
-			"args": [],
-			"cwd": ".",
+			"args": [
+                "tonysneed-vscode-typescript",
+                "--skip-install"
+            ],
+			"cwd": "${workspaceRoot}/",
 			"runtimeExecutable": null,
 			"runtimeArgs": [
 				"--nolazy"
@@ -25,9 +28,7 @@
 			"env": {
 				"NODE_ENV": "development"
 			},
-			"externalConsole": false,
-			"sourceMaps": false,
-			"outDir": null
+			"sourceMaps": false
 		}
 	]
 }

@@ -41,22 +41,7 @@ describe('generator-tonysneed-vscode-typescript:app', function () {
       'package.json',
       'README.md',
       'SpecRunner.html',
-      'tsd.json',
       'tslint.json'
-    ]);
-  });
-
-  it('creates typings', function () {
-    assert.file([
-      'typings/tsd.d.ts',
-      'typings/chokidar/chokidar.d.ts',
-      'typings/express/express.d.ts',
-      'typings/gulp-nodemon/gulp-nodemon.d.ts',
-      'typings/jasmine/jasmine.d.ts',
-      'typings/mime/mime.d.ts',
-      'typings/node/node.d.ts',
-      'typings/serve-static/serve-static.d.ts',
-      'typings/yargs/yargs.d.ts'
     ]);
   });
 });

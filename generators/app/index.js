@@ -5,9 +5,9 @@ var yosay = require('yosay');
 var path = require('path');
 var _ = require('lodash');
 
-module.exports = yeoman.generators.Base.extend({
+module.exports = yeoman.Base.extend({
   constructor: function () {
-    yeoman.generators.Base.apply(this, arguments);
+    yeoman.Base.apply(this, arguments);
 
     this.argument('appname', {type: String, required: false});
 
@@ -24,8 +24,6 @@ module.exports = yeoman.generators.Base.extend({
       'Welcome to Tony Sneed\'s ' + chalk.yellow('Visual Studio Code TypeScript') + ' generator!'
     ));
 
-    var done = this.async();
-
     var dirname = path.basename(process.cwd());
     this.appname = _.kebabCase(dirname);
 
@@ -37,9 +35,8 @@ module.exports = yeoman.generators.Base.extend({
       }
     ];
 
-    this.prompt(prompts, function (props) {
+    return this.prompt(prompts).then(function (props) {
       this.appname = props.appname || this.appname;
-      done();
     }.bind(this));
   },
 
@@ -70,7 +67,6 @@ module.exports = yeoman.generators.Base.extend({
       this.copy('_karma.conf.js', 'karma.conf.js');
       this.copy('_LICENSE', 'LICENSE');
       this.copy('_SpecRunner.html', 'SpecRunner.html');
-      this.copy('_tsd.json', 'tsd.json');
       this.copy('_tslint.json', 'tslint.json');
     },
     directories: function () {
@@ -78,7 +74,6 @@ module.exports = yeoman.generators.Base.extend({
       this.directory('_lib', 'lib');
       this.directory('_src', 'src');
       this.directory('_util', 'util');
-      this.directory('_typings', 'typings');
     }
   },
 

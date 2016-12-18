@@ -1,6 +1,10 @@
 [![Build Status](https://travis-ci.org/tonysneed/generator-tonysneed-vscode-typescript.svg?branch=master)](https://travis-ci.org/tonysneed/generator-tonysneed-vscode-typescript)
 ## Tony Sneed's Yeoman Generator for TypeScript Projects Using Visual Studio Code
 
+*NOTE: This generator is designed to work only on Mac OS X or Linux. 
+To work on Windows, a number of issues will need to be addressed, 
+including differences in file paths.*
+
 ### Using the Yeoman Generator
 
 1. Install **Yeoman**.

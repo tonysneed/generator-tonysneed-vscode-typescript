@@ -1,5 +1,9 @@
 # Visual Studio Code TypeScript Project: <%= appname %>
 
+*NOTE: This generator is designed to work only on Mac OS X or Linux. 
+To work on Windows, a number of issues will need to be addressed, 
+including differences in file paths.*
+
 ## Getting Started
 
 1. You should first install the following **extensions** for Visual Studio Code.
